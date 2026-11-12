@@ -3,8 +3,34 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lez Studio</title>
-<meta name="description" content="Lez Studio crée des sites web sur mesure pour les commerçants de Montpellier et des environs.">
+<title>Lez Studio · Création de sites web pour commerçants à Montpellier</title>
+<meta name="description" content="Lez Studio crée des sites web sur mesure pour les commerçants de Montpellier, Castelnau-le-Lez et des environs : site vitrine, réservation en ligne, visibilité sur Google.">
+<link rel="canonical" href="https://lezstudio.github.io/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#07171a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%2307171a'/%3E%3Cpath d='M5 13c4-4 7 4 11 0s7 4 11 0M5 20c4-4 7 4 11 0s7 4 11 0' stroke='%23ff6a3d' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Lez Studio">
+<meta property="og:title" content="Lez Studio · Création de sites web pour commerçants">
+<meta property="og:description" content="Des sites web sur mesure pour les commerces de Montpellier et des environs, de la maquette à la mise en ligne.">
+<meta property="og:url" content="https://lezstudio.github.io/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Lez Studio",
+  "url": "https://lezstudio.github.io/",
+  "description": "Création de sites web sur mesure pour les commerçants : site vitrine, réservation en ligne, référencement local.",
+  "email": "lez.studio34@gmail.com",
+  "telephone": "+33769369004",
+  "founder": {"@type": "Person", "name": "Timothy Guyonneau"},
+  "address": {"@type": "PostalAddress", "addressLocality": "Castelnau-le-Lez", "postalCode": "34170", "addressRegion": "Occitanie", "addressCountry": "FR"},
+  "areaServed": ["Montpellier", "Castelnau-le-Lez", "Hérault"],
+  "knowsAbout": ["Création de sites web", "Site vitrine", "Référencement local"]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -215,6 +241,35 @@ input:focus,textarea:focus{outline:0;border-color:var(--coral)}
 textarea{resize:vertical;min-height:84px}
 form .btn{justify-self:start;margin-top:8px}
 #status{font-size:.9rem;color:var(--aqua);min-height:1.4em}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.mail{font-family:var(--display);font-size:clamp(1.2rem,2.2vw,1.7rem);font-weight:600;color:var(--sand);border-bottom:1px solid var(--coral);padding-bottom:2px;transition:color .3s}
+.mail:hover{color:var(--coral)}
+form .btn[disabled]{opacity:.6;pointer-events:none}
+
+.consent{font-size:.78rem;color:var(--mute);line-height:1.5}
+.consent a,footer .wrap a{border-bottom:1px solid var(--line);transition:color .3s,border-color .3s}
+.consent a:hover,footer .wrap a:hover{color:var(--sand);border-color:var(--coral)}
+footer .wrap nav{all:unset;display:flex;gap:20px;flex-wrap:wrap}
+
+/* mentions légales */
+#legal{position:fixed;inset:0;z-index:90;background:rgba(4,13,15,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:none;overflow-y:auto;overscroll-behavior:contain}
+#legal.open{display:block;animation:fade .5s var(--ease)}
+.legal-in{position:relative;max-width:780px;margin:clamp(20px,6vh,72px) auto;padding:clamp(26px,5vw,56px);background:var(--ink-2);border:1px solid var(--line);border-radius:22px;width:calc(100% - 2*var(--gut))}
+.legal-in h2{font-size:clamp(2.2rem,5vw,3.6rem);font-stretch:85%;margin:14px 0 8px}
+.legal-in h3{font-size:1.35rem;font-stretch:90%;letter-spacing:-.01em;margin:40px 0 12px;padding-top:24px;border-top:1px solid var(--line)}
+.legal-in p,.legal-in li{color:#c9d6d0;max-width:65ch}
+.legal-in p+p{margin-top:10px}
+.legal-in ul{margin:10px 0 0 1.1em;display:grid;gap:6px}
+.legal-in dl{display:grid;grid-template-columns:minmax(120px,190px) 1fr;gap:10px 20px}
+.legal-in dt{color:var(--mute);font-size:.88rem;padding-top:2px}
+.legal-in dd{color:var(--sand)}
+@media (max-width:560px){.legal-in dl{grid-template-columns:1fr;gap:2px}.legal-in dd{margin-bottom:10px}}
+.legal-in a{color:var(--aqua);border-bottom:1px solid currentColor}
+.legal-in .upd{margin-top:34px;font-size:.82rem;color:var(--mute)}
+.todo{background:rgba(255,106,61,.18);color:var(--coral);padding:0 .3em;border-radius:4px;font-weight:600}
+.close{position:sticky;top:0;float:right;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--ink);font-size:1.3rem;line-height:1;transition:background .3s,color .3s,transform .4s var(--ease)}
+.close:hover{background:var(--coral);color:var(--ink);transform:rotate(90deg)}
+body.lock{overflow:hidden}
 
 footer{border-top:1px solid var(--line);padding:26px 0 34px;color:var(--mute);font-size:.85rem}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
@@ -382,13 +437,16 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <div class="eyebrow rv">Contact</div>
       <h2 class="rv" style="margin-top:20px">On en parle autour d'un <em>café ?</em></h2>
       <p class="rv">Décrivez votre commerce en quelques mots. Je vous rappelle pour fixer un rendez-vous, chez vous, à Montpellier ou aux alentours.</p>
+      <p class="rv"><a class="mail" href="mailto:lez.studio34@gmail.com">lez.studio34@gmail.com</a></p>
     </div>
     <form id="form" class="rv" style="--n:1" novalidate>
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <label for="f-nom">Votre nom<input id="f-nom" name="nom" autocomplete="name" required></label>
       <label for="f-com">Votre commerce<input id="f-com" name="commerce" placeholder="Boulangerie, salon, restaurant…"></label>
       <label for="f-tel">Téléphone ou e-mail<input id="f-tel" name="contact" required></label>
       <label for="f-msg">Votre projet<textarea id="f-msg" name="message"></textarea></label>
       <button class="btn btn-p mag" type="submit">Demander un devis gratuit <span class="arr">→</span></button>
+      <p class="consent">Vos informations servent uniquement à répondre à votre demande. Elles ne sont ni revendues ni utilisées pour de la publicité. <a href="#confidentialite">Politique de confidentialité</a></p>
       <p id="status" role="status"></p>
     </form>
   </div>
@@ -396,8 +454,60 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 
 <footer>
   <div class="giant" aria-hidden="true">Lez Studio</div>
-  <div class="wrap"><span>© 2026 Lez Studio · Création de sites web</span><span>Montpellier et alentours</span></div>
+  <div class="wrap"><span>© 2026 Lez Studio · Création de sites web · Montpellier et alentours</span><nav aria-label="Informations légales"><a href="#mentions-legales">Mentions légales</a><a href="#confidentialite">Confidentialité</a></nav></div>
 </footer>
+
+<div id="legal" role="dialog" aria-modal="true" aria-labelledby="legal-title">
+  <div class="legal-in">
+    <button class="close" id="legal-close" type="button" aria-label="Fermer les mentions légales">×</button>
+    <div class="eyebrow">Informations légales</div>
+    <h2 id="legal-title">Mentions légales</h2>
+    <p>Conformément à l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN).</p>
+
+    <h3>Éditeur du site</h3>
+    <dl>
+      <dt>Nom commercial</dt><dd>Lez Studio</dd>
+      <dt>Exploitant</dt><dd>Timothy Guyonneau, entrepreneur individuel (EI), sous le régime de la micro-entreprise</dd>
+      <dt>Activité</dt><dd>Création de sites internet (activité libérale non réglementée)</dd>
+      <dt>Adresse</dt><dd>1560 avenue de l'Europe, 34170 Castelnau-le-Lez, France</dd>
+      <dt>SIRET</dt><dd>132 459 983 00012</dd>
+      <dt>TVA</dt><dd>TVA non applicable, article 293 B du Code général des impôts</dd>
+      <dt>E-mail</dt><dd><a href="mailto:lez.studio34@gmail.com">lez.studio34@gmail.com</a></dd>
+      <dt>Téléphone</dt><dd>07 69 36 90 04</dd>
+      <dt>Directeur de la publication</dt><dd>Timothy Guyonneau</dd>
+    </dl>
+
+    <h3>Hébergement</h3>
+    <dl>
+      <dt>Hébergeur</dt><dd>GitHub, Inc. (service GitHub Pages)</dd>
+      <dt>Adresse</dt><dd>88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis</dd>
+      <dt>Site</dt><dd><a href="https://github.com" rel="noopener">github.com</a></dd>
+    </dl>
+
+    <h3>Propriété intellectuelle</h3>
+    <p>L'ensemble des contenus de ce site (textes, mise en page, graphismes, logo, animations et code) est la propriété de Lez Studio, sauf mention contraire. Toute reproduction, représentation ou adaptation, totale ou partielle, sans autorisation écrite préalable est interdite.</p>
+    <p>Les commerces présentés dans la section « Démonstration » sont fictifs et servent uniquement d'exemples.</p>
+
+    <h3>Responsabilité</h3>
+    <p>Lez Studio s'efforce de fournir des informations exactes et à jour, sans pouvoir garantir l'absence d'erreur ou d'interruption du site. Les liens vers des sites tiers sont fournis à titre indicatif ; Lez Studio n'est pas responsable de leur contenu.</p>
+
+    <h3 id="confidentialite-title">Politique de confidentialité</h3>
+    <p><strong>Responsable du traitement :</strong> Timothy Guyonneau, Lez Studio, joignable à <a href="mailto:lez.studio34@gmail.com">lez.studio34@gmail.com</a>.</p>
+    <p><strong>Données collectées :</strong> uniquement celles que vous saisissez dans le formulaire de contact : nom, nom du commerce, téléphone ou e-mail, et le message décrivant votre projet.</p>
+    <p><strong>Finalité et base légale :</strong> répondre à votre demande et établir un devis. Le traitement repose sur des mesures précontractuelles prises à votre demande (article 6.1.b du RGPD).</p>
+    <p><strong>Destinataires :</strong> vos données sont lues uniquement par Lez Studio. Elles transitent par les prestataires techniques suivants, qui peuvent les traiter hors de l'Union européenne :</p>
+    <ul>
+      <li>FormSubmit (formsubmit.co), qui transmet le formulaire par e-mail ;</li>
+      <li>Google (Gmail), qui héberge la boîte de réception de Lez Studio ;</li>
+      <li>GitHub, Inc., qui héberge le site.</li>
+    </ul>
+    <p><strong>Durée de conservation :</strong> 3 ans à compter du dernier contact si aucun contrat n'est conclu. En cas de prestation, les données sont conservées pendant la durée de la relation commerciale puis le temps des obligations légales.</p>
+    <p><strong>Vos droits :</strong> vous pouvez demander l'accès, la rectification, l'effacement ou la limitation de vos données, et vous opposer à leur traitement, en écrivant à <a href="mailto:lez.studio34@gmail.com">lez.studio34@gmail.com</a>. Une réponse vous sera apportée sous un mois. Vous pouvez aussi déposer une réclamation auprès de la CNIL (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>).</p>
+    <p><strong>Cookies :</strong> ce site ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience ni de publicité. Les polices de caractères sont chargées depuis les serveurs de Google Fonts, ce qui transmet votre adresse IP à Google.</p>
+
+    <p class="upd">Dernière mise à jour : 12 novembre 2026</p>
+  </div>
+</div>
 
 <script>
 (function(){
@@ -529,11 +639,53 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   /* formulaire */
   $('#form').addEventListener('submit',function(e){
     e.preventDefault();
-    var st=$('#status'), nom=$('#f-nom').value.trim(), tel=$('#f-tel').value.trim();
+    var f=e.target, st=$('#status'), btn=$('button[type=submit]',f);
+    var nom=$('#f-nom').value.trim(), tel=$('#f-tel').value.trim();
     if(!nom||!tel){st.style.color='var(--coral)';st.textContent='Indiquez votre nom et un moyen de vous joindre.';return}
-    st.style.color='var(--aqua)';
-    st.textContent='Version de démonstration : le formulaire sera relié à la boîte mail de Lez Studio à la mise en ligne.';
+    if(f._honey.value) return;
+    btn.disabled=true; st.style.color='var(--mute)'; st.textContent='Envoi en cours…';
+    var fail=function(){st.style.color='var(--coral)';st.textContent='L’envoi n’a pas fonctionné. Écrivez-moi directement à lez.studio34@gmail.com.';btn.disabled=false};
+    try{
+      fetch('https://formsubmit.co/ajax/lez.studio34@gmail.com',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body:JSON.stringify({
+          _subject:'Nouvelle demande de devis : '+($('#f-com').value.trim()||nom),
+          _template:'table',
+          Nom:nom, Commerce:$('#f-com').value.trim(), Contact:tel, Projet:$('#f-msg').value.trim()
+        })
+      }).then(function(r){return r.json()}).then(function(d){
+        if(d && (d.success===true||d.success==='true')){
+          st.style.color='var(--aqua)'; st.textContent='Merci '+nom.split(' ')[0]+', votre demande est bien partie. Je vous recontacte sous 24 h.';
+          f.reset(); btn.disabled=false;
+        } else fail();
+      }).catch(fail);
+    }catch(err){fail()}
   });
+
+  /* mentions légales : ouverture par #mentions-legales ou #confidentialite */
+  (function(){
+    var box=$('#legal'), last=null;
+    function route(){
+      var h=location.hash;
+      if(h==='#mentions-legales'||h==='#confidentialite'){
+        if(!box.classList.contains('open')){last=document.activeElement;box.classList.add('open');document.body.classList.add('lock')}
+        box.scrollTop = h==='#confidentialite' ? Math.max(0,$('#confidentialite-title').offsetTop-30) : 0;
+        $('#legal-close').focus({preventScroll:true});
+      } else if(box.classList.contains('open')){
+        box.classList.remove('open');document.body.classList.remove('lock');
+        if(last&&last.focus) last.focus({preventScroll:true});
+      }
+    }
+    function close(){
+      if(history.replaceState){history.replaceState(null,'',location.pathname+location.search);route()}
+      else location.hash='';
+    }
+    $('#legal-close').addEventListener('click',close);
+    box.addEventListener('click',function(e){if(e.target===box) close()});
+    addEventListener('keydown',function(e){if(e.key==='Escape'&&box.classList.contains('open')) close()});
+    addEventListener('hashchange',route); route();
+  })();
 
   /* rivière : shader WebGL */
   (function(){
