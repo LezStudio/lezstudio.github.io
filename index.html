@@ -413,7 +413,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       </div>
       <div class="track" id="track">
         <svg id="flow" viewBox="0 0 1000 240" preserveAspectRatio="none" aria-hidden="true"><path id="flowp" pathLength="1" d="M0 120C80 20 170 220 250 120S420 20 500 120 670 220 750 120 920 20 1000 120"/></svg>
-        <article class="step"><div class="big">01</div><h3>On se rencontre</h3><p>Je passe dans votre commerce. Vous me racontez votre clientèle, vos habitudes, ce que vous attendez d'un site.</p><time>Dans votre boutique</time></article>
+        <article class="step"><div class="big">01</div><h3>On se rencontre</h3><p>Nous passons dans votre commerce. Vous nous racontez votre clientèle, vos habitudes, ce que vous attendez d'un site.</p><time>Dans votre boutique</time></article>
         <article class="step"><div class="big">02</div><h3>Vous voyez la maquette</h3><p>Une première version de votre site, avec vos couleurs et vos textes. Vous la parcourez sur votre téléphone et vous dites ce qui doit changer.</p><time>Avant de vous engager</time></article>
         <article class="step"><div class="big">03</div><h3>Mise en ligne</h3><p>Nom de domaine, hébergement, fiche Google : tout est branché. Votre site est en ligne et vos clients vous trouvent.</p><time>Clé en main</time></article>
         <article class="step"><div class="big">04</div><h3>On reste là</h3><p>Le site vit avec votre commerce. Nouveaux horaires, nouveaux produits, fêtes de fin d'année : un message suffit.</p><time>Toute l'année</time></article>
@@ -442,7 +442,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     <div>
       <div class="eyebrow rv">Contact</div>
       <h2 class="rv" style="margin-top:20px">On en parle autour d'un <em>café ?</em></h2>
-      <p class="rv">Décrivez votre commerce en quelques mots. Je vous rappelle pour fixer un rendez-vous, chez vous, à Montpellier ou aux alentours.</p>
+      <p class="rv">Décrivez votre commerce en quelques mots. Nous vous rappelons pour fixer un rendez-vous, chez vous, à Montpellier ou aux alentours.</p>
       <p class="rv"><a class="mail" href="mailto:lez.studio34@gmail.com">lez.studio34@gmail.com</a></p>
     </div>
     <form id="form" class="rv" style="--n:1" novalidate>
@@ -650,7 +650,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     if(!nom||!tel){st.style.color='var(--coral)';st.textContent='Indiquez votre nom et un moyen de vous joindre.';return}
     if(f._honey.value) return;
     btn.disabled=true; st.style.color='var(--mute)'; st.textContent='Envoi en cours…';
-    var fail=function(){st.style.color='var(--coral)';st.textContent='L’envoi n’a pas fonctionné. Écrivez-moi directement à lez.studio34@gmail.com.';btn.disabled=false};
+    var fail=function(){st.style.color='var(--coral)';st.textContent='L’envoi n’a pas fonctionné. Écrivez-nous directement à lez.studio34@gmail.com.';btn.disabled=false};
     try{
       fetch('https://formsubmit.co/ajax/lez.studio34@gmail.com',{
         method:'POST',
@@ -662,7 +662,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
         })
       }).then(function(r){return r.json()}).then(function(d){
         if(d && (d.success===true||d.success==='true')){
-          st.style.color='var(--aqua)'; st.textContent='Merci '+nom.split(' ')[0]+', votre demande est bien partie. Je vous recontacte sous 24 h.';
+          st.style.color='var(--aqua)'; st.textContent='Merci '+nom.split(' ')[0]+', votre demande est bien partie. Nous vous recontactons sous 24 h.';
           f.reset(); btn.disabled=false;
         } else fail();
       }).catch(fail);
